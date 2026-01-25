@@ -347,5 +347,9 @@ footer {
         font-size: 14px;
         text-align: center;
         padding: 20px 10px;
+
+        .whatsapp-float {
+            bottom: 15px;
+            right: 15px;
+        }
     }
-}
