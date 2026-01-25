@@ -278,3 +278,63 @@ footer {
     }
 
 }
+/* ========================= */
+/* AJUSTES PROFISSIONAIS MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    header img {
+        width: 140px; /* logo maior no celular */
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 12px;
+        font-size: 18px;
+        border-radius: 8px;
+    }
+
+    section {
+        padding: 20px 15px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .galeria img,
+    .galeria video {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 250px;
+        border-radius: 10px;
+    }
+
+    footer {
+        font-size: 14px;
+        text-align: center;
+        padding: 20px 10px;
+    }
+}
