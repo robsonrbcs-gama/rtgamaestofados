@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #9db6db;
+    color: #333;
+}
+
+/* Estrutura padrão */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+h1 {
+    color: #d4af37; /* dourado */
+    font-size: 42px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2a63afde; /* azul marinho */
+}
+
+.topo {
+    background-color: #0b1f3a;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;   /* diminui o espaço interno */
+}
+
+
+.menu {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.menu a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0b1f3a;
+}
+
+.menu a:hover {
+    color: #d4af37;
+}
+
+/* HERO */
+.hero {
+    background: url('capa.jpg') center/cover no-repeat;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    background-color: rgba(0,0,0,0.6);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #d4af37;
+    color: #0b1f3a;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Cards e grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.orcamento {
+    background-color: #0b1f3a;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.instagram a {
+    color: #d43737;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+img, video {
+    width: 100%;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #043b83;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    text-align: center;
+}
+.logo {
+    width: 220px;
+    height: auto;
+    filter: drop-shadow(0px 8px 12px rgba(170, 166, 166, 0.4));
+    opacity: 0.98;
+}
+
+.topo {
+    position: relative;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* vídeo ocupando todo o fundo */
+.video-topo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* vidro fosco por cima do vídeo */
+.topo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(11, 31, 58, 0.65);
+    backdrop-filter: blur(6px);
+    z-index: 1;
+}
+
+/* conteúdo na frente */
+.logo-area {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* texto elegante */
+.topo h1, .topo p {
+    color: rgb(235, 201, 8);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+.mapa iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: 8px;
+}
+.aviso-golpe {
+    background-color: #fff3cd;
+    border: 2px solid #ffeeba;
+    padding: 20px;
+    margin: 40px 0;
+    border-radius: 8px;
+    color: #856404;
+    font-family: 'Poppins', sans-serif;
+}
+
+.aviso-golpe h2 {
+    margin-bottom: 10px;
+}
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.galeria img,
+.galeria video {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+/* ===== RESPONSIVIDADE PARA CELULAR ===== */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    header img {
+        max-width: 180px; /* logo menor no celular */
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    nav a {
+        display: block;
+        background: white;
+        padding: 10px;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    section {
+        padding: 20px 15px;
+    }
+
+    .galeria {
+        display: grid;
+        grid-template-columns: 1fr; /* 1 item por linha */
+        gap: 15px;
+    }
+
+    .galeria img,
+    .galeria video {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .botao-orcamento {
+        width: 100%;
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+}
